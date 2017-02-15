@@ -12,7 +12,6 @@ import javax.swing.JOptionPane;
  * @author msanders11
  */
 public abstract class Course {
-
     private String courseName;
     private String courseNumber;
     private double credits;
@@ -30,7 +29,7 @@ public abstract class Course {
         return courseName;
     }
 
-    public void setCredits(double credits) {
+    public final void setCredits(double credits) {
         if (credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
                     "Error: credits must be in the range 0.5 to 4.0");
